@@ -3,7 +3,7 @@ import Mailgun from 'mailgun.js';
 const mailgun = new Mailgun(formData);
 const mg = mailgun.client({
 	username: 'api',
-	key: 'e7a3be9d34622834fc6d8fdd45936043-bdb2c8b4-d315e8e4',
+	key: process.env.API_KEY,
 });
 mg.messages
 	.create(sandbox71d3bcb70563489bb967479d4fe7574a.mailgun.org, {

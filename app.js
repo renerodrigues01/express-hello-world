@@ -40,4 +40,8 @@ app.use('*', (req,res) => {
     .end()
 })
 
+app.use("/send", (req, res) =>{
+  
+})
+
 module.exports = app
