@@ -1,0 +1,110 @@
+/* wrapping event on logo */
+
+.wrap-logo {
+    position: relative;
+}
+
+.wrap-logo:after {
+    width: 32px;
+    height: 32px;
+    background-size: 32px;
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: -9px;
+    content: "";
+    z-index: 2;
+    background-image: url(../../immagini/generiche/natale.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+
+.wrap-logo-medium:after {
+    width: 22px;
+    height: 22px;
+    background-size: 22px;
+    top: -12px;
+    left: -7px;
+}
+
+.wrap-logo-small:after {
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    top: -3px;
+    left: -7px;
+}
+
+
+/*xs*/
+
+@media (max-width: 767px) {
+    .content-federation-bar-simplified .wrap-logo-small:after {
+        top: -9px;
+        left: -7px;
+    }
+    .content-header-federation-bar .wrap-logo-small:after {
+        top: -3px;
+        left: -7px;
+    }
+}
+
+
+/*sm*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .content-federation-bar-simplified .wrap-logo-small:after {
+        top: -9px;
+        left: -7px;
+    }
+    .content-header-federation-bar .wrap-logo-small:after {
+        top: -3px;
+        left: -7px;
+    }
+}
+
+
+/*md*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-logo .wrap-logo:after {
+        top: -8px;
+        left: -9px;
+        background-size: 28px;
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+/*lg*/
+
+@media (min-width: 1200px) {}
+
+
+/* High res Display  */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+only screen and (min-resolution: 192dpi) and (min-width: 1200px) {
+    .wrap-logo:after {
+        top: -11px;
+        left: -11px;
+    }
+    .wrap-logo-medium:after {
+        top: -12px;
+        left: -7px;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 992px) and (max-width: 1199px),
+only screen and (min-resolution: 192dpi) and (min-width: 992px) and (max-width: 1199px) {
+    .navbar-logo .wrap-logo:after {
+        top: -8px;
+        left: -10px;
+    }
+}
